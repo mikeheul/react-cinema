@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from '../components/Header';
-import Search from '../components/Search';
+import React from "react";
+import Form from "../components/Form";
+import Header from "../components/Header";
 
 const Home = () => {
-    return (
-        <div className="home-page">
-            <Header />
-            <Search />
-        </div>
-    );
+  return (
+    <div className="home-page">
+      <Header />
+      <Form />
+    </div>
+  );
 };
 
 export default Home;

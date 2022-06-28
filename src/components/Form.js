@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
 
-const Search = () => {
+const Form = () => {
   const [moviesData, setMoviesData] = useState([]);
   const [search, setSearch] = useState("code");
   const [sortGoodBad, setSortGoodBad] = useState(null);
@@ -10,7 +10,7 @@ const Search = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=68ec6963adbf4d67b88cac0414bd2d2d&query=${search}&language=fr-FR`
+        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${search}&language=fr-FR`
       )
       .then((res) => setMoviesData(res.data.results));
   }, [search]);
@@ -63,4 +63,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Form;
