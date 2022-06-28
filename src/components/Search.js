@@ -5,7 +5,7 @@ import Card from './Card';
 const Search = () => {
 
     const [moviesData, setMoviesData] = useState([])
-    const [searchInput, setSearchInput] = useState("star")
+    const [searchInput, setSearchInput] = useState("")
     const [sortGoodBad, setSortGoodBad] = useState(null);
 
     useEffect(() => {
