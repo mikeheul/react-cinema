@@ -7,10 +7,12 @@ const Search = () => {
   const [search, setSearch] = useState("code");
   const [sortGoodBad, setSortGoodBad] = useState(null);
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=68ec6963adbf4d67b88cac0414bd2d2d&query=${search}&language=fr-FR`
+        `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}&language=fr-FR`
       )
       .then((res) => setMoviesData(res.data.results));
   }, [search]);
